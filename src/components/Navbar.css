@@ -1,0 +1,67 @@
+.navbar {
+    background-color: #282c34; /* Dark background */
+    padding: 10px; /* Padding around the navbar */
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-end; /* Align items to the end (right) */
+    align-items: center; /* Center items vertically */
+}
+
+.navbar-toggle {
+    display: none; /* Hidden by default */
+    cursor: pointer; /* Change cursor to pointer */
+    color: white; /* Color for the hamburger icon */
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-direction: row; /* Align items in a row */
+}
+
+.navbar li {
+    margin-left: 20px; /* Space between buttons */
+}
+
+.navbar a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px; /* Padding around each button */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+.navbar a i {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block; /* Show toggle button on small screens */
+    }
+
+    .navbar ul {
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Full width */
+        position: absolute; /* Position it absolutely */
+        top: 60px; /* Position below the navbar */
+        right: 0; /* Align to the right */
+        background-color: #282c34; /* Background color */
+        z-index: 1; /* Ensure it appears above other content */
+    }
+
+    .navbar ul.open {
+        display: flex; /* Show links when open */
+    }
+
+    .navbar li {
+        margin: 10px 0; /* Space between buttons in vertical layout */
+    }
+}
